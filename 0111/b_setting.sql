@@ -27,7 +27,7 @@
 -- 대소문자 구분 X
 -- Edit > Format > UPCASE(대문자)/lowercase(소문자) keywords
 
--- sql 유용한 단축키
+-- 4. sql 유용한 단축키
 -- 파일 저장: ctrl + s
 -- 한 줄 복사: ctrl + d
 -- 한 줄 삭제: ctrl + l
@@ -35,4 +35,12 @@
 -- : 마우스 커서가 위치하는 쿼리문을 실행 ctrl + enter
 -- : 마우스 드래그한 영역에 쿼리문을 실행 ctrl + shift + enter
 
+-- 5. 다크 모드 설정
+-- Edit > Preferences > Appearance
 
+-- 6. 자동 줄바꿈
+
+
+
+
+ 
