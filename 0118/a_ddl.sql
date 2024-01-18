@@ -9,7 +9,7 @@
 # 필드 / 컬럼: 데이터의 특정 유형 지정, 각 필드는 고유한 이름과 데이터 타입을 가짐
 
 # 데이터 타입: 필드에 저장할 수 있는 데이터 종류를 정의
-
+# ----- 데이터베이스 ------
 # 2. 데이터베이스 생성(create)
 # : 데이터를 저장하고 관리하는 첫 단계
 # 기본 형태
@@ -37,8 +37,27 @@ drop database database_name;
 # : show databases;
 show databases;
 
+# ----- 테이블 ------
+# 1. 테이블 생성(create table)
+# : 새로운 테이블을 생성, 테이블에 저장될 데이터의 형태와 특성을 정의
+# : >> 데이터타입, 제약조건, 기본값 등을 설정 가능
 
+# 기본형태
+# create table table_name(
+#	column1 datatype [optionals], 
+#	column2 datatype [optionals], 
+#	column3 datatype [optionals], 
+#	... 
+# )
 
-
-
+# optionals: 컬럼에 적용할 선택적 특성 - not null지정, 기본값 설정 등
+create database example;
+use example;
+create table students (
+	student_id int,
+    name varchar(100) not null,
+    age int not null,
+    major varchar(100)
+);
+ 
 
