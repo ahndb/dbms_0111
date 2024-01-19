@@ -172,7 +172,7 @@ values (1, "노트북", 3);
 insert into `Inquriy` (order_id, product_name) 
 values (2, "스마트폰");
 
-
+drop database `example`; 
 
 
 
