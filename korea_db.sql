@@ -34,7 +34,14 @@ create table `korea_db`.`buy` (
 
 # 제약조건 추가
 # member 테이블의 member_id와 (기본 테이블)
+alter table `korea_db`.`member`
+add primary key(member_id);
+	
 # buy 테이블의 member_id를 외래 키 지정 (참조 테이블)
+alter table  `korea_db`.`buy`
+add constraint
+foreign key(member_id)
+references `korea_db`.`member`(member_id);
 
 INSERT INTO `korea_db`.`member` (name, gender, area_code, grade, contact, points, join_date)
 VALUES
