@@ -36,14 +36,31 @@ inner join `member`
 on `buy`.`member_id` = `member`.`member_id`
 where `buy`.`member_id` =1;
 
+# 조인 시 두 개 이상의 테이블에서 동일한 열 이름이 존재할 경우
+# 테이블.열이름 형식으로 표기 권장!
 
+# 금액이 특정 값 이상인 모든 구매 내역을 조회
+select
+	M.name, B.purchase_date, B.amount
+from
+	`member` M
+inner join `buy` B
+on M.`member_id` = B.`member_id`
+where B.`amount` >= 20000;
 
+# 회원 이름 별로 구매 금액을 내림차순 정렬
+select M.name, sum(B.amount) as total_purchase
+from member m
+join buy B
+on M.member_id = B.member_id
+group by M.name 
+order by total_purchase desc;
 
-
-
-
-
-
+# 한 번이라도 구매한 기록이 있는 회원들을 추출
+select distinct M.name, M.contact
+from member M
+inner join buy B
+on M.member_id = B.member_id;
 
 
 
