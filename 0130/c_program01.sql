@@ -105,6 +105,41 @@ end $$
 delimiter ;
 call caseProc;
 
+# while 문
+# : 반복문(조건식이 참인 동안에 SQL문장들을 계속 반복)
+
+# 기본 구조
+# while 조건식 do
+#	sql문장들
+# end while;
+
+# 1에서 100까지 더하는 while문
+drop procedure if exists whileProc;
+delimiter $$
+create procedure whileProc()
+begin
+	declare i int; -- 1에서 100까지 증가할 변수
+    declare hap int; -- 더한 값을 누적할 변수
+    set i = 1;
+    set hap = 0;
+
+    while (i <= 100) do
+		set hap = hap + i; -- hap의 원래 값에 i를 더해 다시 hap에 할당
+        set i = i + 1; -- i의 원래 값에 1을 더해 다시 i에 할당
+    end while;    
+	select '1부터 100까지의 합 >>>', hap;
+end $$
+delimiter ;
+
+call whileProc;
+
+
+
+
+
+
+
+
 
 
 
