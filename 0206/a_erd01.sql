@@ -56,12 +56,11 @@
 # 1. 테이블 생성(DDL)
 # 2. 상단 탭(Database) 클릭
 # 	Reverse Engineer... 클릭
-
 # 3. 연결할 Connection 선택 > Next
 # 4. 생성하고자 하는 스키마(데이터베이스) 선택 > Next
 # 5. Next > Execute로 생성
-
 # 6. 테이블 간의 관계 설정
+
 
 
 
